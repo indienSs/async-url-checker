@@ -9,7 +9,7 @@ class JobStore {
   isLoadingJobs = false;
   isLoadingDetails = false;
   error: string | null = null;
-  pollingInterval: NodeJS.Timeout | null = null;
+  pollingInterval: ReturnType<typeof setTimeout> | null = null;
 
   constructor() {
     makeAutoObservable(this);
